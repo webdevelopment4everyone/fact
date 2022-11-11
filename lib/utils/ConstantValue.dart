@@ -7,7 +7,7 @@ class ConstantValue {
 
   static String? PREUSERID = '104';
   static String? PRETOKEN =
-      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiIxMDQifQ.l5DXIAgbDi1c71AkTHjBabe58U5SKJ5TiZrEeFxdyoQ';
+      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiIxMDQifQ.UKcmzrZmGCxgFSG6GiLUvF6lu989N1ilgGOdWkiQHeU';
 
   static String? PREUSERTYPE = '';
   static String? PREUSERROLE = '';

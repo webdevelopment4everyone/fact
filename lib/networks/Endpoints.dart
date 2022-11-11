@@ -1,11 +1,12 @@
 class Endpoints {
   Endpoints._();
 //http://3.7.71.53/iitmadras/
-  static const String baseURL = 'http://crm.bemlindia.in/beml/modules/Mobile/';
-  static const String baseURLLOCAL = 'http://3.7.71.53/beml/modules/Mobile/';
+  static const String baseURL =
+      'http://crm.bemlindia.in/bemlquality/modules/Mobile/';
+  static const String baseURLLOCAL = 'http://3.7.71.53/fact/modules/Mobile/';
   // check this while deploying.
   static const String baseURLIMageLocal =
-      'http://crm.bemlindia.in/beml/modules/Mobile/v1/UploadAttachment';
+      'http://crm.bemlindia.in/bemlquality/modules/Mobile/v1/UploadAttachment';
   static const String login = 'v1/login';
   static const String srReportBreakdown = "v1/saveRecord";
   static const String getsapinitaldataforServiceReport = "v1/saveRecord";
@@ -70,6 +71,4 @@ class Endpoints {
   static const String getDetailforPreAndEre = "v1/GetDeliveryNotesDetail";
 
   static const String getDetailofProduct = "v1/GetRecordDetail";
-
-  static const String getAllAggregateinfo = "v1/GetAllAggregateInfo";
 }
