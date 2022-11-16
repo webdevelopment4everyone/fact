@@ -1,17 +1,19 @@
+import 'dart:convert';
 /// statuscode : 1
-/// data : {"assign_user_id":"87","usercreatedid":"64353","usertype":"BEMLUSER","access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiI4NyJ9.PgklzRa8Z8AsULvkqk6aBWxLQest38YrjrQ_O7Y7O0w","username":"78920","password":"Yash@9234","usermobilenumber":"+918765432190","userRole":"Service Engineer","useruniqeid":"87","timestamp":1661344734,"message":"Thank You Have Been Login Succesfully"}
+/// data : {"assign_user_id":"104","usercreatedid":"607809","usertype":"BEMLUSER","access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiIxMDQifQ.UKcmzrZmGCxgFSG6GiLUvF6lu989N1ilgGOdWkiQHeU","username":"36963","password":"Yash@7050","usermobilenumber":"+918523698563","userRole":"Service Manager","useruniqeid":"104","timestamp":1668164208,"message":"Thank You Have Been Login Succesfully"}
 /// statusMessage : "Successfully Logged In"
 
+LoginResponse loginResponseFromJson(String str) => LoginResponse.fromJson(json.decode(str));
+String loginResponseToJson(LoginResponse data) => json.encode(data.toJson());
 class LoginResponse {
   LoginResponse({
-    int? statuscode,
-    Data? data,
-    String? statusMessage,
-  }) {
+      int? statuscode, 
+      Data? data, 
+      String? statusMessage,}){
     _statuscode = statuscode;
     _data = data;
     _statusMessage = statusMessage;
-  }
+}
 
   LoginResponse.fromJson(dynamic json) {
     _statuscode = json['statuscode'];
@@ -21,16 +23,13 @@ class LoginResponse {
   int? _statuscode;
   Data? _data;
   String? _statusMessage;
-  LoginResponse copyWith({
-    int? statuscode,
-    Data? data,
-    String? statusMessage,
-  }) =>
-      LoginResponse(
-        statuscode: statuscode ?? _statuscode,
-        data: data ?? _data,
-        statusMessage: statusMessage ?? _statusMessage,
-      );
+LoginResponse copyWith({  int? statuscode,
+  Data? data,
+  String? statusMessage,
+}) => LoginResponse(  statuscode: statuscode ?? _statuscode,
+  data: data ?? _data,
+  statusMessage: statusMessage ?? _statusMessage,
+);
   int? get statuscode => _statuscode;
   Data? get data => _data;
   String? get statusMessage => _statusMessage;
@@ -44,34 +43,36 @@ class LoginResponse {
     map['statusMessage'] = _statusMessage;
     return map;
   }
+
 }
 
-/// assign_user_id : "87"
-/// usercreatedid : "64353"
+/// assign_user_id : "104"
+/// usercreatedid : "607809"
 /// usertype : "BEMLUSER"
-/// access_token : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiI4NyJ9.PgklzRa8Z8AsULvkqk6aBWxLQest38YrjrQ_O7Y7O0w"
-/// username : "78920"
-/// password : "Yash@9234"
-/// usermobilenumber : "+918765432190"
-/// userRole : "Service Engineer"
-/// useruniqeid : "87"
-/// timestamp : 1661344734
+/// access_token : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyaWQiOiIxMDQifQ.UKcmzrZmGCxgFSG6GiLUvF6lu989N1ilgGOdWkiQHeU"
+/// username : "36963"
+/// password : "Yash@7050"
+/// usermobilenumber : "+918523698563"
+/// userRole : "Service Manager"
+/// useruniqeid : "104"
+/// timestamp : 1668164208
 /// message : "Thank You Have Been Login Succesfully"
 
+Data dataFromJson(String str) => Data.fromJson(json.decode(str));
+String dataToJson(Data data) => json.encode(data.toJson());
 class Data {
   Data({
-    String? assignUserId,
-    String? usercreatedid,
-    String? usertype,
-    String? accessToken,
-    String? username,
-    String? password,
-    String? usermobilenumber,
-    String? userRole,
-    String? useruniqeid,
-    int? timestamp,
-    String? message,
-  }) {
+      String? assignUserId, 
+      String? usercreatedid, 
+      String? usertype, 
+      String? accessToken, 
+      String? username, 
+      String? password, 
+      String? usermobilenumber, 
+      String? userRole, 
+      String? useruniqeid, 
+      int? timestamp, 
+      String? message,}){
     _assignUserId = assignUserId;
     _usercreatedid = usercreatedid;
     _usertype = usertype;
@@ -83,7 +84,7 @@ class Data {
     _useruniqeid = useruniqeid;
     _timestamp = timestamp;
     _message = message;
-  }
+}
 
   Data.fromJson(dynamic json) {
     _assignUserId = json['assign_user_id'];
@@ -109,32 +110,29 @@ class Data {
   String? _useruniqeid;
   int? _timestamp;
   String? _message;
-  Data copyWith({
-    String? assignUserId,
-    String? usercreatedid,
-    String? usertype,
-    String? accessToken,
-    String? username,
-    String? password,
-    String? usermobilenumber,
-    String? userRole,
-    String? useruniqeid,
-    int? timestamp,
-    String? message,
-  }) =>
-      Data(
-        assignUserId: assignUserId ?? _assignUserId,
-        usercreatedid: usercreatedid ?? _usercreatedid,
-        usertype: usertype ?? _usertype,
-        accessToken: accessToken ?? _accessToken,
-        username: username ?? _username,
-        password: password ?? _password,
-        usermobilenumber: usermobilenumber ?? _usermobilenumber,
-        userRole: userRole ?? _userRole,
-        useruniqeid: useruniqeid ?? _useruniqeid,
-        timestamp: timestamp ?? _timestamp,
-        message: message ?? _message,
-      );
+Data copyWith({  String? assignUserId,
+  String? usercreatedid,
+  String? usertype,
+  String? accessToken,
+  String? username,
+  String? password,
+  String? usermobilenumber,
+  String? userRole,
+  String? useruniqeid,
+  int? timestamp,
+  String? message,
+}) => Data(  assignUserId: assignUserId ?? _assignUserId,
+  usercreatedid: usercreatedid ?? _usercreatedid,
+  usertype: usertype ?? _usertype,
+  accessToken: accessToken ?? _accessToken,
+  username: username ?? _username,
+  password: password ?? _password,
+  usermobilenumber: usermobilenumber ?? _usermobilenumber,
+  userRole: userRole ?? _userRole,
+  useruniqeid: useruniqeid ?? _useruniqeid,
+  timestamp: timestamp ?? _timestamp,
+  message: message ?? _message,
+);
   String? get assignUserId => _assignUserId;
   String? get usercreatedid => _usercreatedid;
   String? get usertype => _usertype;
@@ -162,4 +160,5 @@ class Data {
     map['message'] = _message;
     return map;
   }
+
 }

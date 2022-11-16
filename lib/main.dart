@@ -32,8 +32,12 @@
 // import 'package:bemlchsfinal/widgets/models/PreventiveMaintenancePartsModel.dart';
 // import 'package:bemlchsfinal/widgets/models/ServiceForSparesPurchasedPartsModel.dart';
 // import 'package:bemlchsfinal/widgets/models/ShortagesModel.dart';
+import 'package:fact/SplashScreen.dart';
 import 'package:fact/pages/enquiry.dart';
+import 'package:fact/pages/invoice.dart';
+import 'package:fact/pages/invoicedetails.dart';
 import 'package:fact/widgets/model/EnquiryFormModel.dart';
+import 'package:fact/widgets/model/InvoiceFormModel.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // import 'package:bemlchsfinal/pages/SplashScreen.dart';
@@ -78,6 +82,10 @@ class MyAppState extends State<MyApp> {
           create: (_) =>
               EnquiryFormModelProvider(), //Erection parts requirements
         ),
+        ChangeNotifierProvider(
+          create: (_) =>
+              InvoiceFormModelProvider(), //Erection parts requirements
+        ),
       ],
       child: GestureDetector(
         onTap: () {
@@ -92,7 +100,7 @@ class MyAppState extends State<MyApp> {
             platform: TargetPlatform.iOS,
           ),
           home: Scaffold(
-            body: Enquiry(),
+            body: InvoiceDetails(),
           ),
         ),
       ),

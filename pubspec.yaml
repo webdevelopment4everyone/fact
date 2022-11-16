@@ -131,3 +131,5 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/icon/logo.png
+  # assets:
+  #   - assets/icon/logo.png

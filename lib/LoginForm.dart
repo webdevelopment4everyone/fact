@@ -379,7 +379,7 @@ class LoginScreenState extends State<LoginForm> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0))),
                 child: const Text(
-                  "BMEL Register",
+                  "Dealer Register",
                   style: TextStyle(fontFamily: 'Sfpro', fontSize: 12),
                 )),
           ),
